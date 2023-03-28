@@ -13,6 +13,7 @@ namespace MenuRealApi.Models
         public ushort PriceStar { get; set; }
         public string Description { get; set; }
         public DateTime CreatedAt { get; set; }
+        public DateTime UpdatedAt { get; set; }
         public Dictionary<System.DayOfWeek, string> WorkHours { get; set; }
         public bool TakeAway { get; set; }
         public bool Buffet { get; set; }
