@@ -1,3 +1,4 @@
+using MenuRealApi.Services.RestaurantService;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -27,6 +28,8 @@ namespace MenuRealApi
         {
 
             services.AddControllers();
+            services.AddScoped<IRestaurantService, RestaurantService>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "MenuRealApi", Version = "v1" });
